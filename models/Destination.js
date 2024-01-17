@@ -7,6 +7,11 @@ const DestinationSchema = new mongoose.Schema(
       required: [true, "Please provide name"],
       trim: true,
     },
+    country: {
+      type: string,
+      required: [true, "Please provide country"],
+      trim: true,
+    },
     longitude: {
       type: number,
       required: [true, "Please provide longitude"],

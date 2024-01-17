@@ -11,9 +11,82 @@
     <link rel="stylesheet" href="leaflet.css" />
   </head>
   <body>
-    <div class="container d-flex flex-row align-items-center">
-      <div class="col-4 border border-primary">SideBar</div>
-      <div class="col-8" id="map">Map</div>
+    <div class="container-fluid d-flex flex-row">
+      <div class="col-4 p-2">
+        <div class="navbar d-flex justify-content-center">
+          <h5 class="text-center nav-btn">Destinations</h5>
+        </div>
+        <!-- all the destinations -->
+        <div class="list hidden">
+          <ul>
+            <li>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="text-primary">Serampore</h5>
+                  <p class="text-secondary">India</p>
+                  <p class="text-secondary">Upcomming</p>
+                  <p class="text-secondary">Created on: 2021-05-05</p>
+                  <p class="text-secondary">Flag</p>
+                </div>
+                <div>
+                  <button class="btn btn-danger btn-sm">Delete</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- particular destination -->
+        <div class="destination my-5 hidden">
+          <div class="d-flex justify-content-between">
+            <div>
+              <h5 class="text-primary">Serampore</h5>
+              <p class="text-secondary">India</p>
+              <p class="text-secondary">Upcomming</p>
+              <p class="text-secondary">Created on: 2021-05-05</p>
+              <p class="text-secondary">Flag</p>
+            </div>
+            <div>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </div>
+          </div>
+        </div>
+        <form class="form-container trip-planner-form p-2 mt-5 hidden">
+          <div class="mb-3">
+            <div>
+              <label for="name" class="form-label">Place: </label>
+              <input
+                type="text"
+                id="name"
+                value="Serampore"
+                disabled
+                readonly
+              />
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="country" class="form-label">Country: </label>
+                <input
+                  type="text"
+                  id="country"
+                  value="India"
+                  disabled
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="status" class="form-label">Status: </label>
+            <select class="form-select">
+              <option selected value="upcomming">Upcomming</option>
+              <option value="ongoing">Ongoing</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+          <button class="btn btn-primary">Save</button>
+        </form>
+      </div>
+      <div class="col-8" id="map"></div>
     </div>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
